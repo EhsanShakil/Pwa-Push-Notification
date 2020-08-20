@@ -8,9 +8,9 @@ function App() {
   messaging
     .requestPermission()
     .then(() => {
-      return getToken();
+      return messaging.getToken();
     })
-    .then((result) => console.log(result));
+    .then((result) => console.log("Token: ", result));
   return (
     <div className="App">
       <h1>PWA Push Notification</h1>
